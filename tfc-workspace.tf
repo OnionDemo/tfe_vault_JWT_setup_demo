@@ -10,9 +10,19 @@ terraform {
       }
     }
   }
+
+required_providers {
+    tfe = {
+      source = "hashicorp/tfe"
+      version = "0.63.0"
+    }
+  }
 }
 
 
+provider "tfe" {
+  # Configuration options
+}
 provider "tfe" {
   hostname = var.tfc_hostname
 }
