@@ -19,10 +19,6 @@ required_providers {
   }
 }
 
-
-provider "tfe" {
-  # Configuration options
-}
 provider "tfe" {
   hostname = var.tfc_hostname
 }
