@@ -8,9 +8,9 @@ The building blocks in `tfc-workspace.tf` will create that Terraform Cloud works
 
 ## How to use
 
-You'll need the Terraform CLI installed, and you'll need to set the following environment variables in your local shell:
+You'll need the Terraform CLI installed, and you'll need to set the following environment variables in your local shell: ( or use export VAULT_TOKEN = "token_valuexxxxx" )
 
-1. `VAULT_TOKEN`: the Vault token that you'll use to bootstrap your trust configuration in Vault. It will need the ability to enable auth backends and create roles and policies.
+1. `VAULT_TOKEN`: the Vault token that you'll use to bootstrap your trust configuration in Vault. It will need the ability to enable auth backends and create roles and policies. ( Copy the value from "Vault Admin token") 
 1. `VAULT_NAMESPACE` (optional): only set this if you're not using the default Vault namespace.
 1. `TFE_TOKEN`: a Terraform Cloud user token with permission to create workspaces within your organization.
 
