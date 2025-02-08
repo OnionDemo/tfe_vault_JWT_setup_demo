@@ -26,10 +26,10 @@ provider "tfe" {
 # Data source used to grab the project under which a workspace will be created.
 #
 # https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project
-data "tfe_project" "tfc_project" {
+/* data "tfe_project" "tfc_project" {
   name         = var.tfc_project_name
   organization = var.tfc_organization_name
-}
+} */
 
 # Runs in this workspace will be automatically authenticated
 # to Vault with the permissions set in the Vault policy.
@@ -38,7 +38,8 @@ data "tfe_project" "tfc_project" {
 resource "tfe_workspace" "my_workspace" {
   name         = var.tfc_workspace_name
   organization = var.tfc_organization_name
-  project_id   = data.tfe_project.tfc_project.id
+  //project_id   = data.tfe_project.tfc_project.id
+  project_id = prj-kZFuzk3kn19r8TC2
 }
 
 # The following variables must be set to allow runs
