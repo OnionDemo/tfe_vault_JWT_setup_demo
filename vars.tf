@@ -37,6 +37,6 @@ variable "tfc_project_name" {
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "my-vault-workspace"
+  default     = "tfe_vault_setup"
   description = "The name of the workspace that you'd like to create and connect to Vault"
 }
