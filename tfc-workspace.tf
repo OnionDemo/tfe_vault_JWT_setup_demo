@@ -1,6 +1,18 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+terraform {
+  cloud {
+    organization = var.tfc_organization_name
+    workspaces {
+      tags = {
+        layer = "app"
+      }
+    }
+  }
+}
+
+
 provider "tfe" {
   hostname = var.tfc_hostname
 }
